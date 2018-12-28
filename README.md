@@ -1,24 +1,37 @@
-# README
+# This is a sample shop on Spree.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's almost ready for starting, but needs some little improvements and configuration. Note that it was created as an example while studying Spree and creating little project, so some admin setting can work incorrect or have bad styleing (we used open [Colorlib](https://colorlib.com/ "Colorlib website") design). It's not fully finished thing, but a nice little example of base things in Spree.
 
-Things you may want to cover:
+------------------
 
-* Ruby version
+## How to fire it up:
 
-* System dependencies
+* **Clone the repository and install dependensies:**
 
-* Configuration
+```bash
+git clone https://github.com/ARtoriouSs/spree-sample-shop.git
+cd spree-sample-shop
+```
+Then run ```bundle install```
 
-* Database creation
+* **Setup database:**
 
-* Database initialization
+Configure your database and run ```rake db:create db:migrate```
 
-* How to run the test suite
+* **Create .env file with the following content:**
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+GMAIL_USERNAME=your_email@gmail.com
+GMAIL_PASSWORD=your_email_password
+DATABASE_PASSWORD=your_db_password
+```
+Gmail credentials are needed for mailer, it's not required, but without them mailer will not send messages. To run it in production you should also disable CAPTCHA in your gmail account.
 
-* Deployment instructions
+* **Create admin user:**
+```bash
+rake spree_auth:admin:create
+```
 
-* ...
+------------------
+
+Now it's ready to use, visit ```localhost:3000/admin``` to create products, and configure your shop. Keep in mind that checkout will fall if you don't create at least one country and at least one region for it.
