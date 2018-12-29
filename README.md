@@ -34,4 +34,4 @@ rake spree_auth:admin:create
 
 ------------------
 
-Now it's ready to use, visit ```localhost:3000/admin``` to create products, and configure your shop. Keep in mind that checkout will fall if you don't create at least one country and at least one region for it.
+Now it's ready to use, visit ```localhost:3000/admin``` to create products, and configure your shop.
