@@ -1,19 +1,11 @@
 <% address_id = address_type.chars.first %>
 
 <div class="inner" data-hook=<%="#{address_type}_inner" %>>
-
-
-
   <p class="form-group" id=<%="#{address_id}firstname" %>>
-
     <div class="bor8 bg0 m-b-22">
       <%= form.text_field :firstname, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:first_name) %>
     </div>
   </p>
-
-
-
-
 
   <p class="form-group" id=<%="#{address_id}address1" %>>
     <div class="bor8 bg0 m-b-22">
@@ -21,10 +13,7 @@
     </div>
   </p>
 
-
-
-
-  <% if Spree::Config[:address_requires_state] %>
+  <% if Spree::Config[:address_requires_state] && address.country%>
     <p class="form-group" id=<%="#{address_id}state" %>>
       <% have_states = !address.country.states.empty? %>
       <%= form.label :state do %>
@@ -50,33 +39,11 @@
       </noscript>
   <% end %>
 
-
-
-
-
-
-
-
   <p class="form-group" id=<%="#{address_id}phone" %>>
     <div class="bor8 bg0 m-b-22">
       <%= form.phone_field :phone, class: 'stext-111 cl8 plh3 size-111 p-lr-15', placeholder: Spree.t(:phone), required: address.require_phone? %>
     </div>
   </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <% if @order.entity? %>
 
