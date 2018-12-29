@@ -1,6 +1,8 @@
 Spree::Order.class_eval do
   enum customer_type: [:individual, :entity]
 
+  before_validation :set_currency
+
   validates :customer_type, presence: true
 
   with_options presence: true, if: :validations_required? do
@@ -27,5 +29,11 @@ Spree::Order.class_eval do
 
   def validations_required?
     entity? && complete?
+  end
+
+  private
+
+  def set_currency
+    self.currency ||= store.default_currency || Spree::Config[:currency]
   end
 end
