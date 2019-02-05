@@ -1,6 +1,6 @@
 # This is a sample shop on Spree.
 
-It's almost ready for starting, but needs some little improvements and configuration. Note that it was created as an example while studying Spree and creating little project, so some admin setting can work incorrect or have bad styleing (we used open [Colorlib](https://colorlib.com/ "Colorlib website") design). It's not fully finished thing, but a nice little example of base things in Spree.
+It's almost ready for starting, but needs some little improvements and configuration. Note that it was created as an example while learning Spree and creating little project, so some admin settings can work incorrect or have bad styleing (we used open [Colorlib](https://colorlib.com/ "Colorlib website") design). It's not fully finished thing, but a nice little example of base things in Spree.
 
 ------------------
 
