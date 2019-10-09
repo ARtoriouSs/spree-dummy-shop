@@ -34,4 +34,4 @@ rake spree_auth:admin:create
 
 ------------------
 
-Now it's ready to use, visit ```localhost:3000/admin``` to create products, and configure your shop.
+Now it's ready to use, visit [localhost:3000/admin](http://localhost:3000/admin) to create products, and configure your shop.
