@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'spree', '~> 3.6.4'
-gem 'spree_auth_devise', '~> 3.3'
+gem 'spree_auth_devise', '~> 4.0'
 gem 'spree_gateway', '~> 3.3'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'spree_slider', github: 'spree-contrib/spree_slider'
